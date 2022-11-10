@@ -65,7 +65,7 @@
     justify-content: center;
     fill: $color-icon;
 
-    transition: background-color var(--anim-trans), fill var(--anim-trans);
+    transition: background-color $anim-trans, fill $anim-trans;
 
         &:hover,
         &:focus {

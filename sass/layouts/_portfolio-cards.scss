@@ -6,7 +6,7 @@
 
 .cards__item {
     width: calc((100% - 60px) / 3);
-    transition: box-shadow var(--anim-trans);
+    transition: box-shadow $anim-trans;
 
         &:hover,
         &:focus {
@@ -55,7 +55,7 @@
     background-color: rgba(33, 150, 243, 0.9);
     height: 100%;
     transform: translateY(100%);
-    transition: transform var(--anim-trans);
+    transition: transform $anim-trans;
 
         .cards__item:hover &,
         .cards__item:focus & {

@@ -26,7 +26,7 @@
     color: rgba(255, 255, 255, 0.6);
 
     font-style: normal;
-    transition: color var(--anim-trans);
+    transition: color $anim-trans;
 
         &:hover,
         &:active {
@@ -87,7 +87,7 @@
     font-size: 16px;
     line-height: 1.25;
 
-    transition: border var(--anim-trans);
+    transition: border $anim-trans;
 
         &:focus {
             border: 1px solid $accent-color;

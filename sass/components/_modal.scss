@@ -6,17 +6,13 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
 
-    transition: opacity var(--anim-trans), visibility var(--anim-trans);
+    transition: opacity $anim-trans, visibility $anim-trans;
 }
 
 .backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
-}
-
-.backdrop.is-hidden .modal {
-    transform: translate(-50%, -50%) scale(0);
 }
 
 .modal {
@@ -35,7 +31,11 @@
         0px 2px 1px rgba(0, 0, 0, 0.2);
 
     transform: translate(-50%, -50%) scale(1);
-    transition: transform var(--anim-trans);
+    transition: transform $anim-trans;
+
+        .backdrop.is-hidden & {
+            transform: translate(-50%, -50%) scale(0);
+        }
 }
 
 .modal__close {
@@ -53,7 +53,7 @@
 
     fill: $color-logo;
 
-    transition: border-color var(--anim-trans), fill var(--anim-trans);
+    transition: border-color $anim-trans, fill $anim-trans;
 
         &:hover,
         &:focus {
@@ -85,7 +85,7 @@
     padding-right: 42px;
     outline: transparent;
 
-    transition: border var(--anim-trans);
+    transition: border $anim-trans;
 
         &:focus {
             border: 1px solid $accent-color;
@@ -105,7 +105,7 @@
     left: 12px;
     top: 50%;
     transform: translateY(-50%);
-    transition: fill var(--anim-trans);
+    transition: fill $anim-trans;
 
         .modal__input:focus + & {
             fill: $accent-color;
@@ -189,7 +189,7 @@
 
     border: 2px solid $title-text-color;
     border-radius: 3px;
-    transition: border-color var(--anim-trans);
+    transition: border-color $anim-trans;
 
         &:hover,
         &:focus {

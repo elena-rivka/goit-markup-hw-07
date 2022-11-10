@@ -14,7 +14,7 @@
     line-height: 1.87;
     letter-spacing: 0.06em;
 
-    transition: background-color var(--anim-trans);
+    transition: background-color $anim-trans;
 
         &:hover, 
         &:focus {
